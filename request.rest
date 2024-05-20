@@ -1,0 +1,28 @@
+GET http://localhost:4000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTcxNjA1NTg4MCwiZXhwIjoxNzE2MDU1OTAwfQ.27lHUgEIOd4Bn87YCoiWP4OT5HbVXAaMLbdQOSVqpDc
+
+###
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+    "name": "test1",
+    "email": "test1@gmail.com",
+    "password": "12345",
+    "confirmPassword": "12345"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "1234"
+}
+
+###
+GET http://localhost:4000/token
+
+###
+DELETE http://localhost:4000/logout
