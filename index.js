@@ -22,6 +22,9 @@ app.set("view engine", "ejs");
   try {
     await db.authenticate();
     console.log("Database Connected...");
+
+    // Sync models
+    await db.sync();
   } catch (error) {
     console.log(error);
   }
