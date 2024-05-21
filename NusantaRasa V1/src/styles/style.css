@@ -1,0 +1,258 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    background-color: #0A3C06;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    animation: slideInFromTop 1s ease-out forwards;
+}
+
+.container-fluid{
+    padding: 20px;
+}
+
+.navbar-brand{
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    transition: 0.3s color;
+    margin-left: 40px;
+}
+
+.navbar-brand:hover{
+    color: #E3FDCD;
+}
+
+.offcanvas{
+    background-color: #0A3C06;
+
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler .navbar-toggler-icon{
+    background-color: #fff;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.btn-close {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.offcanvas-title{
+    color: #fff;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: #E3FDCD;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+    width: 100%;
+    background: linear-gradient(to bottom left, #093B05, #19A10E);
+    justify-content: space-between;
+  }
+  
+  .hero__inner {
+    margin-top: 80px;
+    margin-bottom: 0;
+    margin-left:0;
+    margin-right: auto;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+
+
+  .hero-img-container {
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    width: 1024px; /* Atur ukuran container sesuai kebutuhan */
+    height: 500px; /* Atur ukuran container sesuai kebutuhan */
+    overflow: hidden; /* Sembunyikan bagian gambar yang tidak terlihat */
+    display: flex;
+    align-items: flex-end; /* Tempatkan gambar di sudut kanan bawah */
+    justify-content: flex-end; /* Tempatkan gambar di sudut kanan bawah */
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+.hero-img {
+    width: 1024px; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
+    height: auto; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
+    clip-path: circle(60% at 100% 100%);
+}
+  
+.hero__title, .hero__tagline {
+    text-align: left; /* Rata kiri */
+}
+  
+  .hero__title {
+    color: #fff;
+    font-size: 50px;
+    margin-left: 60px;
+  }
+  
+  .hero__tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: 60px;
+  }
+  
+  .hero button {
+    padding: 13px 25px 13px 25px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-left: 60px;
+  }
+
+  .bold-text {
+    font-weight: bold;
+    }
+
+  .hero button:hover {
+    background-color: #fff;
+    color: #0A3C06;
+  }
+  
+  .hero button:focus {
+    background-color: #fff;
+    color: #0A3C06;
+  }
+
+  /*About Us */
+
+  #about{
+    min-height: 500px;
+    width: 100%;
+    background: linear-gradient(to bottom left, #093B05, #19A10E);
+  }
+
+  .about-inner{
+    align-items: center;
+    text-align: center;
+  }
+  .about-inner h2{
+    color: white;
+    padding-top: 30px;
+    font-size: 35px;
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+  .about-inner p{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+  .custom-card-about {
+    background-color: #E3FDCD;
+    border-radius: 50px;
+    box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+    animation: slideInFromBottom 1s ease-out forwards;
+}
+
+.custom-card-about-img {
+    border: 2px solid #E3FDCD;
+    padding: 20px 20px;
+    border-radius: 50px;
+}
+
+/*footer*/
+.foot {
+    border-top: 1px solid #e7e7e7;
+    background-color: #fff;
+    padding: 30px 15px 30px 15px;
+    font-display: optional;
+  }
+  
+  .foot p {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: #1B2631;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-display: optional;
+  }
+
+
+/* Animations */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

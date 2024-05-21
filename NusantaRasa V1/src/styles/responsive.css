@@ -1,0 +1,214 @@
+
+@media screen and (max-width: 1024px) {
+    .hero__inner {
+        margin-top: 50px; /* Perkecil margin atas untuk tampilan maksimal 1024px */
+        max-width: 600px; /* Perkecil lebar maksimum untuk tampilan maksimal 1024px */
+    }
+
+    .hero__title {
+        font-size: 30px; /* Perkecil ukuran judul untuk tampilan maksimal 1024px */
+        margin-left: 30px; /* Sesuaikan margin kiri untuk judul pada tampilan maksimal 1024px */
+    }
+
+    .hero__tagline {
+        font-size: 16px; /* Perkecil ukuran tagline untuk tampilan maksimal 1024px */
+        margin-left: 30px; /* Sesuaikan margin kiri untuk tagline pada tampilan maksimal 1024px */
+    }
+
+    .hero button {
+        font-size: 20px; /* Perkecil ukuran tombol untuk tampilan maksimal 1024px */
+        padding: 10px 20px; /* Sesuaikan padding tombol pada tampilan maksimal 1024px */
+        margin-top: 20px; /* Sesuaikan margin atas tombol pada tampilan maksimal 1024px */
+        margin-left: 30px; /* Sesuaikan margin kiri tombol pada tampilan maksimal 1024px */
+    }
+
+        
+    .hero-img-container {
+        z-index: 3;
+        position: absolute;
+        right: 0;
+        width: 1024px; /* Atur ukuran container sesuai kebutuhan */
+        height: 500px; /* Atur ukuran container sesuai kebutuhan */
+        overflow: hidden; /* Sembunyikan bagian gambar yang tidak terlihat */
+        display: flex;
+        align-items: flex-end; /* Tempatkan gambar di sudut kanan bawah */
+        justify-content: flex-end; /* Tempatkan gambar di sudut kanan bawah */
+        animation: slideInFromRight 1s ease-out forwards;
+    }
+
+    .hero-img {
+        width: 1024px; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
+        height: auto; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
+        clip-path: circle(60% at 100% 100%);
+    }
+
+    .about-inner{
+        padding: 10px;
+    }
+
+    .about-inner h2{
+        font-size: 30px;
+    }
+
+    .about-inner p{
+        font-size: 15px;
+    }
+
+    .custom-grup-card-about{
+        padding: 30px;
+    }
+}
+
+
+@media (min-width: 991px){
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #E3FDCD;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero{
+        min-height: 400px;
+    }
+    .hero__inner {
+        margin-top: 80px; /* Perkecil margin atas untuk tampilan maksimal 768px */
+        max-width: 400px; /* Perkecil lebar maksimum untuk tampilan maksimal 768px */
+    }
+
+    .hero__title {
+        font-size: 24px; /* Perkecil ukuran judul untuk tampilan maksimal 768px */
+        margin-left: 20px; /* Sesuaikan margin kiri untuk judul pada tampilan maksimal 768px */
+    }
+
+    .hero__tagline {
+        font-size: 14px; /* Perkecil ukuran tagline untuk tampilan maksimal 768px */
+        margin-left: 20px; /* Sesuaikan margin kiri untuk tagline pada tampilan maksimal 768px */
+    }
+
+    .hero button {
+        font-size: 18px; /* Perkecil ukuran tombol untuk tampilan maksimal 768px */
+        padding: 8px 16px; /* Sesuaikan padding tombol pada tampilan maksimal 768px */
+        margin-top: 15px; /* Sesuaikan margin atas tombol pada tampilan maksimal 768px */
+        margin-left: 20px; /* Sesuaikan margin kiri tombol pada tampilan maksimal 768px */
+    }
+
+    .hero-img-container {
+        width: 600px; /* Perkecil ukuran container untuk tampilan maksimal 768px */
+        height: 400px; /* Perkecil ukuran container untuk tampilan maksimal 768px */
+    }
+
+    .hero-img {
+        width: 600px; /* Perkecil ukuran gambar untuk tampilan maksimal 768px */
+    }
+}
+
+@media screen and (max-width: 758px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: auto;
+    }
+
+    .hero__inner {
+        margin: 0 auto;
+        margin-bottom: 30px;
+        margin-top: 20px;
+        max-width: 100%;
+        padding: 0 20px;
+        order: 2; /* Letakkan di bawah gambar */
+    }
+
+    .hero-img-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        order: 1; /* Letakkan di atas konten */
+        display: block;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: auto;
+        clip-path: none; /* Hapus clip-path agar gambar tampil penuh */
+    }
+
+    .hero__title {
+        font-size: 24px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero__tagline {
+        font-size: 14px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hero button {
+        font-size: 18px;
+        padding: 8px 16px;
+        margin-top: 15px;
+        margin-left: 0;
+        display: block;
+        margin: 20px auto 0;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hero__inner {
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+
+    .hero__title {
+        font-size: 20px;
+    }
+
+    .hero__tagline {
+        font-size: 12px;
+    }
+
+    .hero button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero__inner {
+        padding: 0 5px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .hero__title {
+        font-size: 18px;
+    }
+
+    .hero__tagline {
+        font-size: 10px;
+    }
+
+    .hero button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
