@@ -46,30 +46,30 @@ export const Register = async (req, res) => {
 
 export const Login = async (req, res) => {
   try {
-    const user = await Users.findAll({
+    const user = await Users.findOne({
       where: {
         email: req.body.email,
       },
     });
-    const match = await bcrypt.compare(req.body.password, user[0].password);
-    if (!match) return res.status(404).json({ msg: "Wrong Password" });
-    const userId = user[0].id;
-    const name = user[0].name;
-    const email = user[0].email;
+    if (!user) return res.status(404).json({ msg: "Email not found" });
+
+    const match = await bcrypt.compare(req.body.password, user.password);
+    if (!match) return res.status(400).json({ msg: "Wrong Password" });
+
+    const userId = user.id;
+    const name = user.name;
+    const email = user.email;
     const accessToken = jwt.sign(
       { userId, name, email },
       process.env.ACCESS_TOKEN_SECRET,
-      {
-        expiresIn: "20s",
-      }
+      { expiresIn: "20s" }
     );
     const refreshToken = jwt.sign(
       { userId, name, email },
       process.env.REFRESH_TOKEN_SECRET,
-      {
-        expiresIn: "1d",
-      }
+      { expiresIn: "1d" }
     );
+
     await Users.update(
       { refresh_token: refreshToken },
       {
@@ -78,14 +78,17 @@ export const Login = async (req, res) => {
         },
       }
     );
+
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000,
     });
 
-    res.json({ accessToken });
+    // Redirect to dashboard with the access token
+    res.json({ accessToken, redirectUrl: "/dashboard" });
   } catch (err) {
-    res.status(404).json({ msg: "Email not found" });
+    console.error(err);
+    res.status(500).json({ msg: "An error occurred during login" });
   }
 };
 

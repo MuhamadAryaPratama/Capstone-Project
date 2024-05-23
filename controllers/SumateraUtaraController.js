@@ -1,24 +1,16 @@
 import SumateraUtaraMenu from "../models/SumateraUtaraModel.js";
 
 export const createSumateraUtaraMenu = async (req, res) => {
-  const { name, description, restaurant_name, google_maps_link, rating } =
-    req.body;
+  const { restaurant_name, description, google_maps_link, rating } = req.body;
 
-  if (
-    !name ||
-    !description ||
-    !restaurant_name ||
-    !google_maps_link ||
-    rating == null
-  ) {
+  if (!restaurant_name || !description || !google_maps_link || rating == null) {
     return res.status(400).json({ msg: "Please provide all required fields" });
   }
 
   try {
     const newMenu = await SumateraUtaraMenu.create({
-      name,
-      description,
       restaurant_name,
+      description,
       google_maps_link,
       rating,
     });

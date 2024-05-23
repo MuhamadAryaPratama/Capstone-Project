@@ -1,5 +1,5 @@
 GET http://localhost:4000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJhcnlhIiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTcxNjIwODc1MiwiZXhwIjoxNzE2MjA4NzcyfQ.m91Rr-HBJa83_TRs8F6q9VqOde0TuPlwsxwv792GFos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJhcnlhIiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTcxNjM1MDc4NiwiZXhwIjoxNzE2MzUwODA2fQ.s5sbEl3xt6v5gEBWBSog_sfUnj8z39QikKca4s3rxHY
 
 ###
 POST http://localhost:4000/users
@@ -28,15 +28,14 @@ GET http://localhost:4000/token
 DELETE http://localhost:4000/logout
 
 ###
-POST http://localhost:4000/lampung
+POST http://localhost:4000/sumateraselatan
 Content-Type: application/json
 
 {
-    "name": "Seruit",
-    "description": "Hidangan ini berupa ikan goreng atau bakar yang dicampur sambal terasi dan tempoyak (olahan durian). Istilah yang dipakai untuk merujuk makan seruit adalah 'nyeruit'. Nyeruit berarti makan bersama keluarga maupun masyarakat dengan hidangannya berupa seruit.",
-    "restaurant_name": "Temphoyac",
-    "google_maps_link": "https://maps.app.goo.gl/rMR8Lz5prfTzH9rC8",
-    "rating": 4.5
+    "restaurant_name": "The Eight Hour Gold",
+    "description": "Kue Delapan Jam adalah kue tradisional khas Sumatera Selatan, Indonesia. Kue ini terkenal karena proses pembuatannya yang memakan waktu yang cukup lama, hingga delapan jam, untuk menghasilkan tekstur yang lembut dan aroma yang kaya. Kue Delapan Jam terbuat dari bahan-bahan dasar seperti tepung terigu, gula, telur, santan, dan mentega atau margarin. Proses pembuatannya dimulai dengan mencampurkan semua bahan, kemudian adonan tersebut dikukus dalam loyang yang telah diolesi mentega atau margarin hingga matang.",
+    "google_maps_link": "https://maps.app.goo.gl/NCmJUf4chUW12nJH7",
+    "rating": 4.9
 }
 
 ###

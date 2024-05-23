@@ -1,24 +1,16 @@
 import RiauMenu from "../models/RiauModel.js";
 
 export const createRiauMenu = async (req, res) => {
-  const { name, description, restaurant_name, google_maps_link, rating } =
-    req.body;
+  const { restaurant_name, description, google_maps_link, rating } = req.body;
 
-  if (
-    !name ||
-    !description ||
-    !restaurant_name ||
-    !google_maps_link ||
-    rating == null
-  ) {
+  if (!restaurant_name || !description || !google_maps_link || rating == null) {
     return res.status(400).json({ msg: "Please provide all required fields" });
   }
 
   try {
     const newMenu = await RiauMenu.create({
-      name,
-      description,
       restaurant_name,
+      description,
       google_maps_link,
       rating,
     });

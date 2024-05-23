@@ -47,6 +47,41 @@ import {
   getLampungMenu,
   deleteLampungMenu,
 } from "../controllers/LampungController.js";
+import {
+  createBangkaBelitungMenu,
+  getBangkaBelitungMenu,
+  deleteBangkaBelitungMenu,
+} from "../controllers/BangkaBelitungController.js";
+import {
+  createBantenMenu,
+  getBantenMenu,
+  deleteBantenMenu,
+} from "../controllers/BantenController.js";
+import {
+  createJakartaMenu,
+  getJakartaMenu,
+  deleteJakartaMenu,
+} from "../controllers/JakartaController.js";
+import {
+  createJawaBaratMenu,
+  getJawaBaratMenu,
+  deleteJawaBaratMenu,
+} from "../controllers/JawaBaratController.js";
+import {
+  createJawaTengahMenu,
+  getJawaTengahMenu,
+  deleteJawaTengahMenu,
+} from "../controllers/JawaTengahController.js";
+import {
+  createJawaTimurMenu,
+  getJawaTimurMenu,
+  deleteJawaTimurMenu,
+} from "../controllers/JawaTimurController.js";
+import {
+  createYogyakartaMenu,
+  getYogyakartaMenu,
+  deleteYogyakartaMenu,
+} from "../controllers/YogyakartaController.js";
 
 const router = express.Router();
 
@@ -91,6 +126,34 @@ router.delete("/jambi/:id", deleteJambiMenu);
 router.post("/lampung", createLampungMenu);
 router.get("/lampung", getLampungMenu);
 router.delete("/lampung/:id", deleteLampungMenu);
+
+router.post("/bangkabelitung", createBangkaBelitungMenu);
+router.get("/bangkabelitung", getBangkaBelitungMenu);
+router.delete("/bangkabelitung/:id", deleteBangkaBelitungMenu);
+
+router.post("/banten", createBantenMenu);
+router.get("/banten", getBantenMenu);
+router.delete("/banten/:id", deleteBantenMenu);
+
+router.post("/jakarta", createJakartaMenu);
+router.get("/jakarta", getJakartaMenu);
+router.delete("/jakarta/:id", deleteJakartaMenu);
+
+router.post("/jawabarat", createJawaBaratMenu);
+router.get("/jawabarat", getJawaBaratMenu);
+router.delete("/jawabarat/:id", deleteJawaBaratMenu);
+
+router.post("/jawatengah", createJawaTengahMenu);
+router.get("/jawatengah", getJawaTengahMenu);
+router.delete("/jawatengah/:id", deleteJawaTengahMenu);
+
+router.post("/jawatimur", createJawaTimurMenu);
+router.get("/jawatimur", getJawaTimurMenu);
+router.delete("/jawatimur/:id", deleteJawaTimurMenu);
+
+router.post("/yogyakarta", createYogyakartaMenu);
+router.get("/yogyakarta", getYogyakartaMenu);
+router.delete("/yogyakarta/:id", deleteYogyakartaMenu);
 
 // Rute untuk menampilkan halaman login dan register
 router.get("/login", (req, res) => {

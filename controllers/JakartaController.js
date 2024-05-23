@@ -1,6 +1,6 @@
-import AcehMenu from "../models/AcehModel.js";
+import JakartaMenu from "../models/JakartaModel.js";
 
-export const createAcehMenu = async (req, res) => {
+export const createJakartaMenu = async (req, res) => {
   const { restaurant_name, description, google_maps_link, rating } = req.body;
 
   if (!restaurant_name || !description || !google_maps_link || rating == null) {
@@ -8,7 +8,7 @@ export const createAcehMenu = async (req, res) => {
   }
 
   try {
-    const newMenu = await AcehMenu.create({
+    const newMenu = await JakartaMenu.create({
       restaurant_name,
       description,
       google_maps_link,
@@ -21,9 +21,9 @@ export const createAcehMenu = async (req, res) => {
   }
 };
 
-export const getAcehMenu = async (req, res) => {
+export const getJakartaMenu = async (req, res) => {
   try {
-    const menus = await AcehMenu.findAll();
+    const menus = await JakartaMenu.findAll();
     res.json(menus);
   } catch (err) {
     console.error(err);
@@ -31,11 +31,11 @@ export const getAcehMenu = async (req, res) => {
   }
 };
 
-export const deleteAcehMenu = async (req, res) => {
+export const deleteJakartaMenu = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const deleted = await AcehMenu.destroy({
+    const deleted = await JakartaMenu.destroy({
       where: { id },
     });
 

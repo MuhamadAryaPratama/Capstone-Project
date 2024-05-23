@@ -3,12 +3,12 @@ import db from "../config/Database.js";
 
 const { DataTypes } = Sequelize;
 
-const SumateraUtaraMenu = db.define(
-  "sumut",
+const BangkaBelitungMenu = db.define(
+  "bangka_belitung",
   {
     restaurant_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
@@ -28,4 +28,4 @@ const SumateraUtaraMenu = db.define(
   }
 );
 
-export default SumateraUtaraMenu;
+export default BangkaBelitungMenu;

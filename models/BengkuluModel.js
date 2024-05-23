@@ -6,15 +6,11 @@ const { DataTypes } = Sequelize;
 const BengkuluMenu = db.define(
   "bengkulu",
   {
-    name: {
+    restaurant_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    restaurant_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
