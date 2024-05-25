@@ -13,7 +13,7 @@ class Hero extends HTMLElement {
                 </div>
                 
             <div class="hero-img-container">
-                <img class="hero-img" src="https://www.goindonesiatours.com/wp-content/uploads/Indonesia-Traditional-Food-Top-10-Indonesia-Food-Must-try.jpg" alt="Hero Image">
+                <img class="hero-img" src="/images/hero/food-bg.jpeg" alt="Hero Image">
             </div>
             </div>
           `;
