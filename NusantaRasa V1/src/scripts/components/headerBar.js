@@ -1,10 +1,10 @@
 class headerBar extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
         <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">NusantaRasa</a>
@@ -22,10 +22,10 @@ class headerBar extends HTMLElement {
                   <a class="nav-link mx-lg-2" aria-current="page" href="/">Beranda</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#explore">Jelajahi</a>
+                  <a class="nav-link mx-lg-2" href="#jelajahi">Jelajahi</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#popular">Terpopuler</a>
+                  <a class="nav-link mx-lg-2" href="#terpopuler">Terpopuler</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link mx-lg-2" href="#about">Tentang</a>
@@ -36,7 +36,7 @@ class headerBar extends HTMLElement {
         </div>
       </nav>
         `;
-    }
+  }
 }
 
 customElements.define('header-bar', headerBar);

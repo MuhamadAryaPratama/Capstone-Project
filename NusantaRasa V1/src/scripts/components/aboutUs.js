@@ -1,10 +1,10 @@
 class AboutUs extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
             <section id="about">
                 <div class="about-inner">
                     <h2>Tentang Kami</h2>
@@ -55,7 +55,7 @@ class AboutUs extends HTMLElement {
               </div>
             </section>
         `;
-    }
+  }
 }
 
 customElements.define('about-us', AboutUs);

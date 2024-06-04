@@ -165,6 +165,69 @@ nav{
   color: #0A3C06;
 }
 
+/*Jelajahi */
+
+#jelajahi{
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  width: 100%;
+  background: white;
+  padding-bottom: 70px;
+}
+.jelajahi-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+.jelajahi-inner h2{
+  color: #0A3C06;
+  padding-top: 30px;
+  font-size: 35px;
+}
+.jelajahi-inner p{
+  color: #0A3C06;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.jelajahi-pilih{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 10px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-select{
+  background-color: #E3FDCD;
+  border-radius: 10px;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/*Kuliner Terpopuler */
+
+#terpopuler{
+  min-height: 500px;
+  width: 100%;
+  background: white;
+}
+.terpopuler-inner{
+  align-items: center;
+  text-align: center;
+}
+.terpopuler-inner h2{
+  color: #0A3C06;
+  padding-top: 30px;
+  font-size: 35px;
+}
+
 /*About Us */
 
 #about{

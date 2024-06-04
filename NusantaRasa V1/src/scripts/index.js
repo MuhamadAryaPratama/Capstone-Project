@@ -3,7 +3,9 @@ import '../styles/style.css'; // Menggunakan path relatif dari direktori index.j
 import '../styles/responsive.css'; // Menggunakan path relatif dari direktori index.js
 import './components/headerBar.js';
 import './components/hero.js';
-import './components/aboutUs.js'; 
+import './components/contentList.js';
+import './components/kulinerTerpopuler.js';
+import './components/aboutUs.js';
 import './components/footerBar.js';
 import { loadContent } from './routes/router.js';
 import { initApp } from './views/app.js'; // Impor initApp dari app.js
