@@ -29,6 +29,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
 app.use(router);
 
-app.listen(4000, () => {
+app.listen(4000, '0.0.0.0', () => {
   console.log("Server berhasil di running di port 4000");
 });
