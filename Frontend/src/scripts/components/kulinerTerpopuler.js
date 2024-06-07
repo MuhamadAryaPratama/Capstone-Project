@@ -14,7 +14,7 @@ class kulinerTerpopuler extends HTMLElement {
             <div class="row row-cols-2 row-cols-md-3 g-4 terpopuler-grup-card">
               <div class="col">
                 <div class="card custom-card-terpopuler">
-                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler" alt="...">
+                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center custom-card-title">Nama Restaurant</h5>
                     <p class="card-text icon-text">
@@ -31,7 +31,7 @@ class kulinerTerpopuler extends HTMLElement {
               </div>
               <div class="col">
                 <div class="card custom-card-terpopuler">
-                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler" alt="...">
+                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center custom-card-title">Nama Restaurant</h5>
                     <p class="card-text icon-text">
@@ -48,7 +48,7 @@ class kulinerTerpopuler extends HTMLElement {
               </div>
               <div class="col">
                 <div class="card custom-card-terpopuler">
-                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler" alt="...">
+                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center custom-card-title">Nama Restaurant</h5>
                   <p class="card-text icon-text">
@@ -65,7 +65,7 @@ class kulinerTerpopuler extends HTMLElement {
               </div>
               <div class="col">
                 <div class="card custom-card-terpopuler">
-                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler" alt="...">
+                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center custom-card-title">Nama Restaurant</h5>
                   <p class="card-text icon-text">
@@ -82,7 +82,7 @@ class kulinerTerpopuler extends HTMLElement {
               </div>
                 <div class="col">
                   <div class="card custom-card-terpopuler">
-                    <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler" alt="...">
+                    <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center custom-card-title">Nama Restaurant</h5>
                     <p class="card-text icon-text">
@@ -99,7 +99,7 @@ class kulinerTerpopuler extends HTMLElement {
                 </div>
                 <div class="col">
                   <div class="card custom-card-terpopuler">
-                    <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler" alt="...">
+                    <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center custom-card-title">Nama Restaurant</h5>
                     <p class="card-text icon-text">

@@ -15,7 +15,7 @@ class AboutUs extends HTMLElement {
                 <div class="row row-cols-1 row-cols-md-3 g-4 mx-auto custom-grup-card-about" style="max-width: 800px;">
                 <div class="col">
                   <div class="card custom-card-about">
-                    <img src="/images/kami/fadil2.jpg" class="card-img-top custom-card-about-img" alt="...">
+                    <img src="/images/kami/fadil2.jpg" class="card-img-top custom-card-about-img lazyload" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center" style="font-size: 16px;">Fadhil Muhammad Tanjo</h5>
                       <div class="d-flex justify-content-center">
@@ -28,7 +28,7 @@ class AboutUs extends HTMLElement {
                 </div>
                 <div class="col">
                   <div class="card custom-card-about">
-                    <img src="/images/kami/sabil.jpg" class="card-img-top custom-card-about-img" alt="...">
+                    <img src="/images/kami/sabil.jpg" class="card-img-top custom-card-about-img lazyload" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center" style="font-size: 18px;">Salsabila Tunnisa</h5>
                       <div class="d-flex justify-content-center">
@@ -41,7 +41,7 @@ class AboutUs extends HTMLElement {
                 </div>
                 <div class="col">
                   <div class="card custom-card-about">
-                    <img src="/images/kami/arya2.jpg" class="card-img-top custom-card-about-img" alt="...">
+                    <img src="/images/kami/arya2.jpg" class="card-img-top custom-card-about-img lazyload" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center" style="font-size: 16px;">Muhamad Arya Pratama</h5>
                       <div class="d-flex justify-content-center">

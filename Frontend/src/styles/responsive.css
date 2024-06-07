@@ -9,6 +9,10 @@
     .hero button {
         font-size: 25px;
     }
+
+    .foot{
+        margin-top: auto;
+    }
 }
 
 /* Tablet (>=768px and <1024px) */
@@ -56,6 +60,27 @@
     .custom-card-terpopuler{
         width: 240px;
         height: auto;
+    }
+
+    .menu-item-text{
+        max-width: 900px;
+    }
+
+    .menu-item-text h2{
+        font-size: 17px;
+    }
+    
+    .menu-item-text p{
+        font-size: 10px;
+    }
+    .foot{
+        margin-top: auto;
+    }
+
+    .foot p{
+        font-size: 14px;
+        font-weight: 400px;
+        margin: 0;
     }
 
 
@@ -149,6 +174,33 @@
     
     .card-body p{
         font-size: 10px;
+    }
+    .container{
+        height: 100%;
+    }
+
+    .menu-item{
+        flex-direction: column;
+        min-height: auto;
+        margin-bottom: 30px;
+    }
+
+    .menu-item-text{
+        margin: 20px;
+    }
+
+    .menu-item-text h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .foot{
+        margin-top: auto;
+    }
+
+    .foot p{
+        font-size: 12px;
+        margin: 0;
     }
     
 }
@@ -246,4 +298,29 @@
     .card-body p{
         font-size: 10px;
     }
+
+    .container{
+        height: 100%;
+    }
+
+    .menu-item{
+        flex-direction: column;
+        min-height: auto;
+        margin-bottom: 30px;
+    }
+
+    .menu-item-text{
+        margin: 20px;
+    }
+
+    .menu-item-text h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .foot p{
+        font-size: 12px;
+        margin: 0;
+    }
+    
 }

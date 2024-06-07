@@ -20,20 +20,17 @@ class AcehMenu extends HTMLElement {
   render(menus) {
     this.innerHTML = `
         <div class="container">
-          <h1>Aceh Menu</h1>
+          <h1>Nanggroe Aceh Darussalam</h1>
           <ul>
-            ${menus
-    .map(
-      (menu) => `
-              <li>
-                <h2>Nama Restoran: ${menu.restaurant_name}</h2>
-                <p>Deskripsi: ${menu.description}</p>
-                <p>Link Google Maps: <a href="${menu.google_maps_link}" target="_blank">Google Maps</a></p>
-                <p>Rating: ${menu.rating}</p>
+              <li class="menu-item">
+                <img src="/images/hero/food-bg.jpeg" class="gambar-menu lazyload" alt="...">
+                <div class="menu-item-text">
+                  <h2>Waroeng Mak Cik Sedayu </h2>
+                  <p>Makanan tradisional juga dapat didefinisikan sebagai makanan umum yang biasa dikonsumsi sejak beberapa generasi, terdiri dari hidangan yang sesuai dengan selera manusia, tidak bertentangan dengan keyakinan agama masyarakat lokal, dan dibuat dari bahan-bahan makanan dan rempah-rempah yang tersedia lokal (Sastroamidjojo</p>
+                  <p><i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">Google Maps</a></p>
+                  <p><i class="bi bi-star-fill"></i> 4.4</p>
+                </div>
               </li>
-            `,
-    )
-    .join('')}
           </ul>
         </div>
       `;

@@ -1,10 +1,10 @@
 class Hero extends HTMLElement {
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
             <div class="hero">
                 <div class="hero__inner">
                 <h1 class="hero__title">Membantu Temukan <br> Rasa Paling Enak</h1>
@@ -13,11 +13,11 @@ class Hero extends HTMLElement {
                 </div>
                 
             <div class="hero-img-container">
-                <img class="hero-img" src="/images/hero/food-bg.jpeg" alt="Hero Image">
+                <img class="hero-img lazyload" src="/images/hero/food-bg.jpeg" alt="Hero Image">
             </div>
             </div>
           `;
-    }
+  }
 }
 
 customElements.define('hero-bar', Hero);

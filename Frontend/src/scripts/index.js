@@ -40,7 +40,9 @@ import './components/kulinerTerpopuler.js';
 import './components/aboutUs.js';
 import './components/footerBar.js';
 import { loadContent } from './routes/router.js';
-import { initApp } from './views/app.js'; // Impor initApp dari app.js
+import { initApp } from './views/app.js';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 // Panggil fungsi inisialisasi ketika DOM siap
 document.addEventListener('DOMContentLoaded', initApp);

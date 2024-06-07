@@ -326,6 +326,67 @@ margin: 0 auto;
 }
 
 
+/* Menu pada setiap provinsi */
+.container{
+  margin-top: 80px;
+  height: 100vh;
+}
+
+.container h1{
+  text-align: center;
+  color: #0A3C06;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 30px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #E3FDCD;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.gambar-menu {
+  width: 250px; /* Ukuran gambar kecil */
+  height: auto;
+  margin: 20px;
+  border-radius: 30px;
+}
+
+.menu-item-text{
+  max-width: 1024px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0A3C06;
+}
+
+.menu-item-text h2, p {
+  margin: 0 10px 10px 0;
+}
+
+.menu-item-text h2{
+  font-size: 20px;
+  color: #0A3C06;
+}
+
+.menu-item-text p{
+  font-size: 15px;
+  text-align: justify;
+  color: #0A3C06;
+}
+
+.menu-item-text a{
+  text-decoration: none;
+  color: #46b11f;
+}
+
+.menu-item-text a:hover{
+  text-decoration: underline;
+  color: #0A3C06;
+}
+
 /* Animations */
 @keyframes slideInFromLeft {
   0% {
