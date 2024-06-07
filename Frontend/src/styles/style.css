@@ -1,356 +1,384 @@
 *{
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html, body{
-  height: 100vh;
+height: 100vh;
 }
 
-nav{
-    background-color: #0A3C06;
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
-    animation: slideInFromTop 1s ease-out forwards;
+/* Header */
+.custom-navbar {
+background-color: #0A3C06;
+box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
-.container-fluid{
-    padding: 20px;
+.offcanvas-custom{
+background-color: #0A3C06;
 }
 
-.navbar-brand{
-    color: #fff;
-    font-weight: 500;
-    font-size: 24px;
-    transition: 0.3s color;
-    margin-left: 40px;
+.text-bg-dark.custom-bg {
+  background-color: #0A3C06 !important;
+  color: #ffffff !important;
 }
-
-.navbar-brand:hover{
-    color: #E3FDCD;
-}
-
-
 
 .navbar-toggler{
-    border: none;
-    font-size: 1.25rem;
+border: none;
+font-size: 1.25rem;
 }
 
 .navbar-toggler .navbar-toggler-icon{
-    background-color: #fff;
-    min-width: 44px;
-    min-height: 44px;
-}
-
-.btn-close {
-    min-width: 44px;
-    min-height: 44px;
-}
-
-.offcanvas{
-  background-color: #0A3C06;
-  height: 100vh;
-}
-
-
-.offcanvas-title{
-    color: #fff;
+min-width: 44px;
+min-height: 44px;
 }
 
 .navbar-toggler:focus, .btn-close:focus{
-    box-shadow: none;
-    outline: none;
+box-shadow: none;
+outline: none;
+}
+
+.btn-close {
+min-width: 44px;
+min-height: 44px;
+}
+
+.navbar-brand{
+color: #fff;
+font-weight: 500;
+font-size: 24px;
+transition: 0.3s color;
+margin-left: 40px;
+}
+
+.navbar-brand:hover{
+color: #E3FDCD;
 }
 
 .nav-link{
-    color: #fff;
-    font-weight: 500;
-    position: relative;
-    min-height: 44px;
-    min-width: 44px;
+color: #fff;
+font-weight: 500;
+position: relative;
+min-height: 44px;
+min-width: 44px;
 }
 
 .nav-link:hover, .nav-link.active{
-    color: #E3FDCD;
+color: #E3FDCD;
 }
-
-
-
-
 
 /* Hero */
 
 .hero {
-    display: flex;
-    align-items: center;
-    min-height: 500px;
-    width: 100%;
-    background: linear-gradient(to bottom left, #093B05, #19A10E);
-    justify-content: space-between;
-  }
-  
-  .hero__inner {
-    margin-top: 80px;
-    margin-bottom: 0;
-    margin-left:0;
-    margin-right: auto;
-    max-width: 800px;
-    position: relative;
-    z-index: 1;
-    animation: slideInFromLeft 1s ease-out forwards;
-  }
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  width: 100%;
+  background: linear-gradient(to bottom left, #093B05, #19A10E);
+  justify-content: space-between;
+}
+
+.hero__inner {
+  margin-top: 80px;
+  margin-bottom: 0;
+  margin-left:0;
+  margin-right: auto;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  animation: slideInFromLeft 1s ease-out forwards;
+}
 
 
-  .hero-img-container {
-    z-index: 2;
-    position: absolute;
-    right: 0;
-    width: 1024px; /* Atur ukuran container sesuai kebutuhan */
-    height: 500px; /* Atur ukuran container sesuai kebutuhan */
-    overflow: hidden; /* Sembunyikan bagian gambar yang tidak terlihat */
-    display: flex;
-    align-items: flex-end; /* Tempatkan gambar di sudut kanan bawah */
-    justify-content: flex-end; /* Tempatkan gambar di sudut kanan bawah */
-    animation: slideInFromRight 1s ease-out forwards;
+.hero-img-container {
+  z-index: 2;
+  position: absolute;
+  right: 0;
+  width: 1024px; /* Atur ukuran container sesuai kebutuhan */
+  height: 500px; /* Atur ukuran container sesuai kebutuhan */
+  overflow: hidden; /* Sembunyikan bagian gambar yang tidak terlihat */
+  display: flex;
+  align-items: flex-end; /* Tempatkan gambar di sudut kanan bawah */
+  justify-content: flex-end; /* Tempatkan gambar di sudut kanan bawah */
+  animation: slideInFromRight 1s ease-out forwards;
 }
 
 .hero-img {
-    width: 1024px; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
-    height: auto; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
-    clip-path: circle(60% at 100% 100%);
+  width: 1024px; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
+  height: auto; /* Atur ukuran gambar lebih besar dari container untuk memastikan clipping */
+  clip-path: circle(60% at 100% 100%);
 }
-  
+
 .hero__title, .hero__tagline {
-    text-align: left; /* Rata kiri */
+  text-align: left; /* Rata kiri */
 }
-  
+
 .hero__title {
-  color: #fff;
-  font-size: 50px;
-  margin-left: 60px;
+color: #fff;
+font-size: 50px;
+margin-left: 60px;
 }
 
 .hero__tagline {
-  color: #fff;
-  margin-top: 16px;
-  font-size: 20px;
-  font-weight: 300;
-  margin-left: 60px;
+color: #fff;
+margin-top: 16px;
+font-size: 20px;
+font-weight: 300;
+margin-left: 60px;
 }
 
 .hero button {
-  padding: 13px 25px 13px 25px;
-  outline: none;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 25px;
-  font-weight: 600;
-  margin-top: 30px;
-  margin-left: 60px;
+padding: 13px 25px 13px 25px;
+outline: none;
+background-color: transparent;
+border: 1px solid #fff;
+color: #fff;
+border-radius: 5px;
+cursor: pointer;
+font-size: 25px;
+font-weight: 600;
+margin-top: 30px;
+margin-left: 60px;
 }
 
 .bold-text {
-  font-weight: bold;
-  }
+font-weight: bold;
+}
 
 .hero button:hover {
-  background-color: #fff;
-  color: #0A3C06;
+background-color: #fff;
+color: #0A3C06;
 }
 
 .hero button:focus {
-  background-color: #fff;
-  color: #0A3C06;
+background-color: #fff;
+color: #0A3C06;
 }
 
 /*Jelajahi */
 
 #jelajahi{
-  display: flex;
-  flex-direction: column;
-  min-height: 200px;
-  width: 100%;
-  background: white;
-  padding-bottom: 70px;
+display: flex;
+flex-direction: column;
+min-height: 200px;
+width: 100%;
+background: white;
+padding-bottom: 70px;
 }
 .jelajahi-inner{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-grow: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+flex-grow: 1;
 }
 .jelajahi-inner h2{
-  color: #0A3C06;
-  padding-top: 30px;
-  font-size: 35px;
+color: #0A3C06;
+padding-top: 30px;
+font-size: 35px;
 }
 .jelajahi-inner p{
-  color: #0A3C06;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  font-size: 20px;
+color: #0A3C06;
+padding-top: 10px;
+padding-bottom: 20px;
+font-size: 20px;
 }
 
 .jelajahi-pilih{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  padding: 10px;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50%;
+padding: 10px;
+margin-top: 0;
+margin-left: auto;
+margin-right: auto;
 }
 
 .form-select{
-  background-color: #E3FDCD;
-  border-radius: 10px;
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+background-color: #E3FDCD;
+border-radius: 10px;
+box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.btn-custom {
+  background-color: #0A3C06;
+  color: white; /* Warna teks */
+  margin-left: 15px;
 }
 
 /*Kuliner Terpopuler */
 
 #terpopuler{
-  min-height: 500px;
-  width: 100%;
-  background: white;
+min-height: 500px;
+width: 100%;
+background: white;
+margin-bottom: 30px;
 }
 .terpopuler-inner{
-  align-items: center;
-  text-align: center;
+align-items: center;
+text-align: center;
 }
 .terpopuler-inner h2{
-  color: #0A3C06;
-  padding-top: 30px;
-  font-size: 35px;
+color: #0A3C06;
+padding-top: 30px;
+font-size: 35px;
+}
+
+.custom-img-terpopuler{
+border-radius: 50px;
+padding: 20px 30px 0 30px;
+}
+
+.custom-card-terpopuler{
+margin-left: auto; 
+margin-right: auto;
+background-color: #E3FDCD;
+width: 300px;
+height: 350px;
+box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+animation: flipIn 1s ease-out forwards;
+}
+
+.terpopuler-grup-card{
+margin-top: 5px;
+margin-bottom: 90px;
+}
+
+.icon-text{
+display: flex;
+}
+
+.icon-text i{
+margin-right: 10px;
+}
+
+.card-text{
+margin: 10px;
 }
 
 /*About Us */
 
 #about{
-  min-height: 500px;
-  width: 100%;
-  background: linear-gradient(to bottom left, #093B05, #19A10E);
+min-height: 500px;
+width: 100%;
+background: linear-gradient(to bottom left, #093B05, #19A10E);
 }
 
 .about-inner{
-  align-items: center;
-  text-align: center;
+align-items: center;
+text-align: center;
 }
 .about-inner h2{
-  color: white;
-  padding-top: 30px;
-  font-size: 35px;
-  animation: slideInFromLeft 1s ease-out forwards;
+color: white;
+padding-top: 30px;
+font-size: 35px;
+animation: slideInFromLeft 1s ease-out forwards;
 }
 .about-inner p{
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  font-size: 20px;
-  animation: slideInFromRight 1s ease-out forwards;
+color: white;
+padding-top: 10px;
+padding-bottom: 20px;
+font-size: 20px;
+animation: slideInFromRight 1s ease-out forwards;
 }
 .custom-card-about {
-  width: 240px;
-  height: auto;
-  gap: 15px;
-  background-color: #E3FDCD;
-  border-radius: 50px;
-  box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.5);
-  margin-bottom: 30px;
-  animation: flipIn 1s ease-out forwards;
-  padding-top: 20px;
+width: 240px;
+height: auto;
+gap: 15px;
+background-color: #E3FDCD;
+border-radius: 50px;
+box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.5);
+margin-bottom: 30px;
+animation: flipIn 1s ease-out forwards;
+padding-top: 20px;
 }
 
 .custom-card-about-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 3px solid #E3FDCD;
-  outline: 5px solid #0A3C06;
-  border-radius: 50px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+width: 150px;
+height: 150px;
+object-fit: cover;
+border: 3px solid #E3FDCD;
+outline: 5px solid #0A3C06;
+border-radius: 50px;
+border-radius: 50%;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
 }
 
 /*footer*/
 .foot {
-    margin-top: auto; 
-    border-top: 1px solid #e7e7e7;
-    background-color: #fff;
-    padding: 30px 15px 30px 15px;
-    font-display: optional;
-  }
-  
-  .foot p {
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    color: #1B2631;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-display: optional;
-  }
+  margin-top: auto; 
+  border-top: 1px solid #e7e7e7;
+  background-color: #fff;
+  padding: 30px 15px 30px 15px;
+  font-display: optional;
+}
+
+.foot p {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #1B2631;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-display: optional;
+}
 
 
 /* Animations */
 @keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
 }
 
 
 @keyframes flipIn {
-  0% {
-    transform: perspective(400px) rotateY(90deg);
-    opacity: 0;
-  }
-  100% {
-    transform: perspective(400px) rotateY(0deg);
-    opacity: 1;
-  }
+0% {
+  transform: perspective(400px) rotateY(90deg);
+  opacity: 0;
+}
+100% {
+  transform: perspective(400px) rotateY(0deg);
+  opacity: 1;
+}
 }
 
 @keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
 }
 
 @keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
 }
 
 @keyframes slideInFromBottom {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
   }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

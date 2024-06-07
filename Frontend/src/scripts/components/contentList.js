@@ -48,7 +48,7 @@ class contentList extends HTMLElement {
             <option value="malukuutara">Maluku Utara</option>
             <!-- Add more options here for other provinces -->
           </select>
-          <button class="btn btn-primary" id="exploreButton">Jelajahi</button>
+          <button class="btn btn-custom" id="exploreButton">Jelajahi</button>
         </div>
       </section>
     `;
