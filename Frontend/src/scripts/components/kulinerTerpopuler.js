@@ -11,7 +11,7 @@ class kulinerTerpopuler extends HTMLElement {
           </div>
           
           <div class="container-fluid">
-            <div class="row row-cols-1 row-cols-md-3 g-4 terpopuler-grup-card">
+            <div class="row row-cols-2 row-cols-md-3 g-4 terpopuler-grup-card">
               <div class="col">
                 <div class="card custom-card-terpopuler">
                   <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler" alt="...">
