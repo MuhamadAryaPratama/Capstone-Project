@@ -42,6 +42,13 @@ class EditResto extends HTMLElement {
 
     loadRestoData() {
         const provinsi = document.querySelector("#provinsi-select").value;
+        const restoDataDiv = document.querySelector("#resto-data");
+
+        if (!provinsi) {
+            restoDataDiv.innerHTML = '';
+            return;
+        }
+
         if (provinsi) {
             const restoDataDiv = document.querySelector("#resto-data");
 
