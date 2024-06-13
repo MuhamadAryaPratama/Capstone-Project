@@ -28,10 +28,10 @@ class AcehMenu extends HTMLElement {
                 <li class="menu-item">
                   <img src="/images/hero/food-bg.jpeg" class="gambar-menu lazyload" alt="...">
                   <div class="menu-item-text">
-                    <h2>Waroeng Mak Cik Sedayu </h2>
-                    <p>Makanan tradisional juga dapat didefinisikan sebagai makanan umum yang biasa dikonsumsi sejak beberapa generasi, terdiri dari hidangan yang sesuai dengan selera manusia, tidak bertentangan dengan keyakinan agama masyarakat lokal, dan dibuat dari bahan-bahan makanan dan rempah-rempah yang tersedia lokal (Sastroamidjojo</p>
-                    <p><i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">Google Maps</a></p>
-                    <p><i class="bi bi-star-fill"></i> 4.4</p>
+                    <h2>Nama Restoran: ${menu.restaurant_name}</h2>
+                    <p>${menu.description}</p>
+                    <p><i class="bi bi-geo-alt-fill"></i> <a href="${menu.google_maps_link}" target="_blank">Google Maps</a></p>
+                    <p><i class="bi bi-star-fill"></i> ${menu.rating}</p>
                   </div>
                 </li>
               `,
