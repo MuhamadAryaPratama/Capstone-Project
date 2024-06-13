@@ -7,10 +7,10 @@ module.exports = merge(common, {
   devServer: {
     static: [
       {
-        directory: path.join(__dirname, 'src/public'), // Menetapkan direktori public sebagai sumber konten statis
+        directory: path.join(__dirname, 'src/public'),
       },
       {
-        directory: path.join(__dirname, 'dist'), // Menambahkan direktori dist jika perlu
+        directory: path.join(__dirname, 'dist'),
       },
     ],
     open: true,

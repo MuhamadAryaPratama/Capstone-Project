@@ -208,6 +208,13 @@ import {
   editNusaTenggaraBaratMenu,
 } from "../controllers/NusaTenggaraBaratController.js";
 
+import {
+  createKulinerTerpopuler,
+  getKulinerTerpopuler,
+  deleteKulinerTerpopuler,
+  editKulinerTerpopuler
+} from "../controllers/KulinerTerpopulerController.js";
+
 const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -376,6 +383,11 @@ router.post("/nusatenggarabarat", createNusaTenggaraBaratMenu);
 router.get("/nusatenggarabarat", getNusaTenggaraBaratMenu);
 router.delete("/nusatenggarabarat/:id", deleteNusaTenggaraBaratMenu);
 router.put("/nusatenggarabarat/:id", editNusaTenggaraBaratMenu);
+
+router.post("/kulinerterpopuler", createKulinerTerpopuler);
+router.get("/kulinerterpopuler", getKulinerTerpopuler);
+router.delete("/kulinerterpopuler/:id", deleteKulinerTerpopuler);
+router.put("/kulinerterpopuler/:id", editKulinerTerpopuler);
 
 // User routes
 router.get("/users", verifyToken, getUsers); // Protect this route with verifyToken middleware
