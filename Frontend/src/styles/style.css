@@ -4,6 +4,8 @@
 
 html, body{
 height: 100vh;
+display: flex;
+flex-direction: column;
 }
 
 /* Header */
@@ -308,6 +310,7 @@ margin: 0 auto;
 
 /*footer*/
 .foot {
+  position: relative;
   margin-top: auto; 
   border-top: 1px solid #e7e7e7;
   background-color: #fff;
@@ -329,13 +332,14 @@ margin: 0 auto;
 /* Menu pada setiap provinsi */
 .container{
   margin-top: 80px;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .container h1{
   text-align: center;
   color: #0A3C06;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 50px;
   font-size: 30px;
 }
