@@ -20,7 +20,7 @@ class MalukuMenu extends HTMLElement {
   render(menus) {
     this.innerHTML = `
           <div class="container">
-            <h1>Sumatera Selatan Menu</h1>
+            <h1>Maluku Menu</h1>
             <ul>
               ${menus
     .map(
@@ -45,7 +45,7 @@ class MalukuMenu extends HTMLElement {
   renderError(error) {
     this.innerHTML = `
           <div class="container">
-            <h1>Error Loading Sumatera Selatan Menu</h1>
+            <h1>Error Loading Maluku Menu</h1>
             <p>Error: ${error.message}</p>
           </div>
         `;

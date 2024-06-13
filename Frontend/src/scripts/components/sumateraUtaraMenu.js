@@ -20,7 +20,7 @@ class SumateraUtaraMenu extends HTMLElement {
   render(menus) {
     this.innerHTML = `
           <div class="container">
-            <h1>Aceh Menu</h1>
+            <h1>Sumatera Utara Menu</h1>
             <ul>
               ${menus
     .map(

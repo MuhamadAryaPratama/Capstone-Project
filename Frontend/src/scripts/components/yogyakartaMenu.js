@@ -20,7 +20,7 @@ class YogyakartaMenu extends HTMLElement {
   render(menus) {
     this.innerHTML = `
           <div class="container">
-            <h1>Aceh Menu</h1>
+            <h1>Daerah Istimewa Yogyakarta Menu</h1>
             <ul>
               ${menus
     .map(
@@ -45,7 +45,7 @@ class YogyakartaMenu extends HTMLElement {
   renderError(error) {
     this.innerHTML = `
           <div class="container">
-            <h1>Error Loading Sumatera Utara Menu</h1>
+            <h1>Error Loading Daerah Istimewa Yogyakarta Menu</h1>
             <p>Error: ${error.message}</p>
           </div>
         `;
