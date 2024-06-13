@@ -1,3 +1,6 @@
+/* eslint-disable no-shadow */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable implicit-arrow-linebreak */
 const CACHE_NAME = 'nusantarasa-lite-cache-v1';
 const urlsToCache = [
   '/',
@@ -48,56 +51,53 @@ const urlsToCache = [
 ];
 
 self.addEventListener('install', (event) => {
+  console.log('Service Worker: Install');
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        return cache.addAll(urlsToCache);
-      })
+    caches.open(CACHE_NAME).then((cache) => {
+      console.log('Service Worker: Caching files');
+      return Promise.all(urlsToCache.map((url) => cache.add(url).catch((error) => {
+        console.error('Failed to cache:', url, error);
+      })));
+    }),
   );
 });
 
 self.addEventListener('fetch', (event) => {
+  console.log('Service Worker: Fetching', event.request.url);
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Cache hit - return response
         if (response) {
+          console.log('Service Worker: Returning from cache', event.request.url);
           return response;
         }
-
-        // Not found in cache - fetch and cache
+        console.log('Service Worker: Fetching from network', event.request.url);
         return fetch(event.request)
           .then((response) => {
-            // Check if we received a valid response
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
-
-            // Clone the response
             const responseToCache = response.clone();
-
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
               });
-
             return response;
           });
-      })
+      }).catch((error) => {
+        console.error('Fetching failed:', error);
+        throw error;
+      }),
   );
 });
 
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activate');
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.filter((cacheName) => {
-          // Delete outdated caches
-          return cacheName.startsWith('nusantarasa-lite-cache-') && cacheName !== CACHE_NAME;
-        }).map((cacheName) => {
-          return caches.delete(cacheName);
-        })
-      );
-    })
+    caches.keys().then((cacheNames) => Promise.all(
+      cacheNames.filter((cacheName) =>
+        cacheName.startsWith('nusantarasa-lite-cache-') && cacheName !== CACHE_NAME)
+        .map((cacheName) => caches.delete(cacheName)),
+    )),
   );
 });

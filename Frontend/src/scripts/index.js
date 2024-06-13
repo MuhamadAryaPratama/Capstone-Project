@@ -46,3 +46,16 @@ import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 // Panggil fungsi inisialisasi ketika DOM siap
 document.addEventListener('DOMContentLoaded', initApp);
+
+// Daftar service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.bundle.js')
+      .then((registration) => {
+        console.log('Service Worker terdaftar dengan cakupan:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Pendaftaran Service Worker gagal:', error);
+      });
+  });
+}
