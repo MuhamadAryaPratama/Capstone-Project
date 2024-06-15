@@ -194,7 +194,7 @@ input, textarea, select {
     align-items: flex-end;
 }
 
-#edit-btn, #delete-btn {
+.edit-btn, .delete-btn {
     width: 100%;
     background-color: #19A10E;
     color: white;
@@ -209,11 +209,11 @@ input, textarea, select {
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-#edit-btn:hover, #delete-btn:hover {
+.edit-btn:hover {
     background-color: #e5bb00;
 }
 
-#delete-btn:hover {
+.delete-btn:hover {
     background-color: #ac140c;
 }
 
@@ -234,4 +234,15 @@ input, textarea, select {
     margin-bottom: 20px;
     margin-top: 20px;
     font-display: optional;
+}
+
+.swal2-input {
+    width: 80%;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.swal2-confirm {
+    background-color: #19A10E !important;
+    color: white !important; 
 }
