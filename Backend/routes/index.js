@@ -2,8 +2,6 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { getUsers, Register, Login, Logout } from "../controllers/Users.js";
-import { verifyToken } from "../middleware/VerifyToken.js";
-import { refreshToken } from "../controllers/RefreshToken.js"; // Make sure this controller is implemented
 
 // Pulau Sumatera
 import {
@@ -208,6 +206,13 @@ import {
   editNusaTenggaraBaratMenu,
 } from "../controllers/NusaTenggaraBaratController.js";
 
+import {
+  createKulinerTerpopuler,
+  getKulinerTerpopuler,
+  deleteKulinerTerpopuler,
+  editKulinerTerpopuler,
+} from "../controllers/KulinerTerpopulerController.js";
+
 const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -377,11 +382,15 @@ router.get("/nusatenggarabarat", getNusaTenggaraBaratMenu);
 router.delete("/nusatenggarabarat/:id", deleteNusaTenggaraBaratMenu);
 router.put("/nusatenggarabarat/:id", editNusaTenggaraBaratMenu);
 
+router.post("/kulinerterpopuler", createKulinerTerpopuler);
+router.get("/kulinerterpopuler", getKulinerTerpopuler);
+router.delete("/kulinerterpopuler/:id", deleteKulinerTerpopuler);
+router.put("/kulinerterpopuler/:id", editKulinerTerpopuler);
+
 // User routes
-router.get("/users", verifyToken, getUsers); // Protect this route with verifyToken middleware
+router.get("/dashboard", getUsers);
 router.post("/users", Register);
 router.post("/login", Login);
-router.get("/token", refreshToken);
 router.delete("/logout", Logout);
 
 // Serve login and register HTML pages

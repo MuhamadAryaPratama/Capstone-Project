@@ -85,9 +85,9 @@
 
           if (response.ok) {
             alert("Login successful");
-            window.location.href = data.redirectUrl; // redirect to dashboard
+            window.location.href = "./admin/index.html";
           } else {
-            alert(data.msg);
+            alert(data.msg); // Tampilkan pesan error jika login gagal
           }
         } catch (error) {
           console.error("Error:", error);
