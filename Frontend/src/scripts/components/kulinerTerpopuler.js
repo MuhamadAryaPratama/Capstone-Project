@@ -1,70 +1,94 @@
 class kulinerTerpopuler extends HTMLElement {
   connectedCallback() {
-    this.fetchData();
+    this.render();
   }
 
-  async fetchData() {
-    try {
-      const response = await fetch('http://localhost:4000/kulinerterpopuler');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      this.render(data);
-    } catch (error) {
-      console.error('Fetch error:', error);
-      this.renderError(error);
-    }
-  }
-
-  render(menus) {
+  render() {
     this.innerHTML = `
-      <section id="terpopuler">
-        <div class="terpopuler-inner">
-          <h2>Kuliner Terpopuler</h2>
-        </div>
-        <div class="container-fluid">
-          <div class="row row-cols-2 row-cols-md-3 g-4 terpopuler-grup-card">
-            ${menus.map(menu => `
-              <div class="col">
-                <div class="card custom-card-terpopuler">
-                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="${menu.restaurant_name}">
+          <section id="terpopuler">
+          <div class="terpopuler-inner">
+              <h2>Kuliner Terpopuler</h2>
+          </div>
+          
+          <div class="container-fluid">
+            <div class="row g-4 terpopuler-grup-card">
+              <div class="col-12">
+                <div class="card custom-card-terpopuler right-img">
+                  <img src="/images/hero/mie-gomak.jpg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title text-center custom-card-title">${menu.restaurant_name}</h5>
+                    <h5 class="card-title text-center custom-card-title">Mie Gomak Mak Renny</h5>
+                    <p>Mie Gomak adalah masakan khas dari daerah Sumatera Utara, Indonesia, khususnya suku Batak. Makanan ini terbuat dari mie yang dicampur dengan berbagai bahan lainnya seperti daging sapi, ikan, atau ayam, serta sayuran seperti kacang panjang, daun singkong.</p>
                     <p class="card-text icon-text">
-                      <i class="bi bi-geo-alt-fill"></i> <a href="${menu.google_maps_link}" target="_blank">View on Google Maps</a>
+                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/X7WN3vPzTJayoSrV9</a>
                     </p>
                     <p class="card-text icon-text">
-                      <i class="bi bi-star-fill"></i> ${menu.rating}
+                      <i class="bi bi-star-fill"></i> 4.5
+                    </p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-eye-fill"></i> 1234x
                     </p>
                   </div>
                 </div>
               </div>
-            `).join('')}
-          </div>
-        </div>
-      </section>
-    `;
-  }
-
-  renderError(error) {
-    this.innerHTML = `
-      <section id="terpopuler">
-        <div class="terpopuler-inner">
-          <h2>Kuliner Terpopuler</h2>
-        </div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col">
-              <div class="alert alert-danger" role="alert">
-                ${error.message}
+              <div class="col-12">
+                <div class="card custom-card-terpopuler left-img">
+                  <img src="/images/hero/CIK-ME-ME.jpg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center custom-card-title">Lunpia Cik Me Me</h5>
+                    <p>Lunpia Cik Me Me adalah salah satu varian lunpia yang terkenal di Semarang, Jawa Tengah. Lunpia Cik Me Me terbuat dari bahan-bahan berkualitas tinggi, seperti tepung terigu, rebung, udang, daging ayam atau babi cincang, dan bumbu-bumbu pilihan.</p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/Eszq7S1x1BkJghbR7</a>
+                    </p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-star-fill"></i> 4.8
+                    </p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-eye-fill"></i> 1234x
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card custom-card-terpopuler right-img">
+                  <img src="/images/hero/sop-konro.jpg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center custom-card-title">Konro Karebosi</h5>
+                    <p>Sop iga sapi dengan kuah rempah yang kental dan lezat.</p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/aYeyev5w7kv4xxoGA</a>
+                    </p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-star-fill"></i> 4.4
+                    </p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-eye-fill"></i> 1234x
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card custom-card-terpopuler right-img">
+                  <img src="/images/hero/food-bg.jpeg" class="card-img-top custom-img-terpopuler lazyload" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center custom-card-title">Warung Kopi ASIANG</h5>
+                    <p>Kopi Pontianak terkenal dengan rasa yang kuat dan aroma yang khas.</p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/3R9GMXR4JT4fKb8i8</a>
+                    </p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-star-fill"></i> 4.6
+                    </p>
+                    <p class="card-text icon-text">
+                      <i class="bi bi-eye-fill"></i> 1234x
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-    `;
+  
+          </section>
+          `;
   }
 }
 
-customElements.define('kuliner-terpopuler', kulinerTerpopuler);
+customElements.define("kuliner-terpopuler", kulinerTerpopuler);

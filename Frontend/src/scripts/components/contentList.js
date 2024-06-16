@@ -46,6 +46,7 @@ class contentList extends HTMLElement {
             <option value="kalimantanutara">Kalimantan Utara</option>
             <option value="maluku">Maluku</option>
             <option value="malukuutara">Maluku Utara</option>
+            <option value="papua">Papua</option>
             <!-- Add more options here for other provinces -->
           </select>
           <button class="btn btn-custom" id="exploreButton">Jelajahi</button>
@@ -55,18 +56,18 @@ class contentList extends HTMLElement {
   }
 
   addEventListeners() {
-    const exploreButton = this.querySelector('#exploreButton');
-    const provinceSelect = this.querySelector('#provinceSelect');
+    const exploreButton = this.querySelector("#exploreButton");
+    const provinceSelect = this.querySelector("#provinceSelect");
 
-    exploreButton.addEventListener('click', () => {
+    exploreButton.addEventListener("click", () => {
       const selectedProvince = provinceSelect.value;
       if (selectedProvince) {
         window.location.href = `#${selectedProvince}`;
       } else {
-        alert('Silakan pilih provinsi terlebih dahulu!');
+        alert("Silakan pilih provinsi terlebih dahulu!");
       }
     });
   }
 }
 
-customElements.define('content-list', contentList);
+customElements.define("content-list", contentList);

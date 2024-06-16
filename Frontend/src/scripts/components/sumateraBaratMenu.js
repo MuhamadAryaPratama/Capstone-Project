@@ -5,14 +5,14 @@ class SumateraBaratMenu extends HTMLElement {
 
   async fetchData() {
     try {
-      const response = await fetch('http://localhost:4000/sumaterabarat');
+      const response = await fetch("http://localhost:4000/sumaterabarat");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
       this.render(data);
     } catch (error) {
-      console.error('Fetch error:', error);
+      console.error("Fetch error:", error);
       this.renderError(error);
     }
   }
@@ -23,10 +23,9 @@ class SumateraBaratMenu extends HTMLElement {
             <h1>Sumatera Barat Menu</h1>
             <ul>
               ${menus
-    .map(
-      (menu) => `
+                .map(
+                  (menu) => `
                 <li class="menu-item">
-                  <img src="/images/hero/food-bg.jpeg" class="gambar-menu lazyload" alt="...">
                   <div class="menu-item-text">
                     <h2>Nama Restoran: ${menu.restaurant_name}</h2>
                     <p>${menu.description}</p>
@@ -34,9 +33,9 @@ class SumateraBaratMenu extends HTMLElement {
                     <p><i class="bi bi-star-fill"></i> ${menu.rating}</p>
                   </div>
                 </li>
-              `,
-    )
-    .join('')}
+              `
+                )
+                .join("")}
             </ul>
           </div>
         `;
@@ -52,4 +51,4 @@ class SumateraBaratMenu extends HTMLElement {
   }
 }
 
-customElements.define('sumaterabarat-menu', SumateraBaratMenu);
+customElements.define("sumaterabarat-menu", SumateraBaratMenu);

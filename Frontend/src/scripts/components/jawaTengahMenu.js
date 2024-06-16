@@ -5,14 +5,14 @@ class JawaTengahMenu extends HTMLElement {
 
   async fetchData() {
     try {
-      const response = await fetch('http://localhost:4000/jawatengah');
+      const response = await fetch("http://localhost:4000/jawatengah");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
       this.render(data);
     } catch (error) {
-      console.error('Fetch error:', error);
+      console.error("Fetch error:", error);
       this.renderError(error);
     }
   }
@@ -23,10 +23,9 @@ class JawaTengahMenu extends HTMLElement {
             <h1>Jawa Tengah Menu</h1>
             <ul>
               ${menus
-    .map(
-      (menu) => `
+                .map(
+                  (menu) => `
                 <li class="menu-item">
-                  <img src="/images/hero/food-bg.jpeg" class="gambar-menu lazyload" alt="...">
                   <div class="menu-item-text">
                     <h2>Nama Restoran: ${menu.restaurant_name}</h2>
                     <p>${menu.description}</p>
@@ -34,9 +33,9 @@ class JawaTengahMenu extends HTMLElement {
                     <p><i class="bi bi-star-fill"></i> ${menu.rating}</p>
                   </div>
                 </li>
-              `,
-    )
-    .join('')}
+              `
+                )
+                .join("")}
             </ul>
           </div>
         `;
@@ -52,4 +51,4 @@ class JawaTengahMenu extends HTMLElement {
   }
 }
 
-customElements.define('jawatengah-menu', JawaTengahMenu);
+customElements.define("jawatengah-menu", JawaTengahMenu);

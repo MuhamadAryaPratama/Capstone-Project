@@ -26,7 +26,6 @@ class BengkuluMenu extends HTMLElement {
     .map(
       (menu) => `
                 <li class="menu-item">
-                  <img src="/images/hero/food-bg.jpeg" class="gambar-menu lazyload" alt="...">
                   <div class="menu-item-text">
                     <h2>Nama Restoran: ${menu.restaurant_name}</h2>
                     <p>${menu.description}</p>
