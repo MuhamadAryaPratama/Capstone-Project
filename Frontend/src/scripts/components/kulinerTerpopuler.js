@@ -10,7 +10,7 @@ class kulinerTerpopuler extends HTMLElement {
               <h2>Kuliner Terpopuler</h2>
           </div>
           
-          <div class="container-fluid">
+          <div class="container-fluid terpopuler-container-fluid">
             <div class="row g-4 terpopuler-grup-card">
               <div class="col-12">
                 <div class="card custom-card-terpopuler right-img">
@@ -91,4 +91,4 @@ class kulinerTerpopuler extends HTMLElement {
   }
 }
 
-customElements.define("kuliner-terpopuler", kulinerTerpopuler);
+customElements.define('kuliner-terpopuler', kulinerTerpopuler);

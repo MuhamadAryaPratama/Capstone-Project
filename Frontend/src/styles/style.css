@@ -5,6 +5,8 @@
 html,
 body {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* skip to content */
@@ -230,7 +232,7 @@ body {
 
 /*Kuliner Terpopuler */
 
-.container-fluid {
+.terpopuler-container-fluid {
   padding: 0 15px;
   margin-top: 30px;
 }
@@ -259,6 +261,7 @@ body {
   margin-right: 30px;
   margin-left: 30px;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+  height: 400px;
 }
 
 .terpopuler-grup-card .right-img {
@@ -369,16 +372,16 @@ body {
   font-display: optional;
 }
 
-/* Menu pada setiap provinsi */
-.container {
+/* Menu pada setiap provinsi */.container{
   margin-top: 80px;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
 }
 
-.container h1 {
+.container h1{
   text-align: center;
-  color: #0a3c06;
-  margin-top: 100px;
+  color: #0A3C06;
+  margin-top: 80px;
   margin-bottom: 50px;
   font-size: 30px;
 }
@@ -387,7 +390,7 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-  background-color: #e3fdcd;
+  background-color: #E3FDCD;
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -398,37 +401,38 @@ body {
   border-radius: 30px;
 }
 
-.menu-item-text {
+.menu-item-text{
   max-width: 1024px;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #0a3c06;
+  color: #0A3C06;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 
-.menu-item-text h2,
-p {
+.menu-item-text h2, p {
   margin: 0 10px 10px 0;
 }
 
-.menu-item-text h2 {
+.menu-item-text h2{
   font-size: 20px;
-  color: #0a3c06;
+  color: #0A3C06;
 }
 
-.menu-item-text p {
+.menu-item-text p{
   font-size: 15px;
   text-align: justify;
-  color: #0a3c06;
+  color: #0A3C06;
 }
 
-.menu-item-text a {
+.menu-item-text a{
   text-decoration: none;
   color: #46b11f;
 }
 
-.menu-item-text a:hover {
+.menu-item-text a:hover{
   text-decoration: underline;
-  color: #0a3c06;
+  color: #0A3C06;
 }
 
 /* Animations */
