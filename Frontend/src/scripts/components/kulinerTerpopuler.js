@@ -19,7 +19,7 @@ class kulinerTerpopuler extends HTMLElement {
                     <h5 class="card-title text-center custom-card-title">Mie Gomak Mak Renny</h5>
                     <p>Mie Gomak adalah masakan khas dari daerah Sumatera Utara, Indonesia, khususnya suku Batak. Makanan ini terbuat dari mie yang dicampur dengan berbagai bahan lainnya seperti daging sapi, ikan, atau ayam, serta sayuran seperti kacang panjang, daun singkong.</p>
                     <p class="card-text icon-text">
-                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/X7WN3vPzTJayoSrV9</a>
+                      <i class="bi bi-geo-alt-fill"></i> <a href="https://maps.app.goo.gl/X7WN3vPzTJayoSrV9" target="_blank">Google Maps</a>
                     </p>
                     <p class="card-text icon-text">
                       <i class="bi bi-star-fill"></i> 4.5
@@ -37,7 +37,7 @@ class kulinerTerpopuler extends HTMLElement {
                     <h5 class="card-title text-center custom-card-title">Lunpia Cik Me Me</h5>
                     <p>Lunpia Cik Me Me adalah salah satu varian lunpia yang terkenal di Semarang, Jawa Tengah. Lunpia Cik Me Me terbuat dari bahan-bahan berkualitas tinggi, seperti tepung terigu, rebung, udang, daging ayam atau babi cincang, dan bumbu-bumbu pilihan.</p>
                     <p class="card-text icon-text">
-                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/Eszq7S1x1BkJghbR7</a>
+                      <i class="bi bi-geo-alt-fill"></i> <a href="https://maps.app.goo.gl/Eszq7S1x1BkJghbR7" target="_blank">Google Maps</a>
                     </p>
                     <p class="card-text icon-text">
                       <i class="bi bi-star-fill"></i> 4.8
@@ -55,7 +55,7 @@ class kulinerTerpopuler extends HTMLElement {
                     <h5 class="card-title text-center custom-card-title">Konro Karebosi</h5>
                     <p>Sop iga sapi dengan kuah rempah yang kental dan lezat.</p>
                     <p class="card-text icon-text">
-                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/aYeyev5w7kv4xxoGA</a>
+                      <i class="bi bi-geo-alt-fill"></i> <a href="https://maps.app.goo.gl/aYeyev5w7kv4xxoGA" target="_blank">Google Maps</a>
                     </p>
                     <p class="card-text icon-text">
                       <i class="bi bi-star-fill"></i> 4.4
@@ -73,7 +73,7 @@ class kulinerTerpopuler extends HTMLElement {
                     <h5 class="card-title text-center custom-card-title">Warung Kopi ASIANG</h5>
                     <p>Kopi Pontianak terkenal dengan rasa yang kuat dan aroma yang khas.</p>
                     <p class="card-text icon-text">
-                      <i class="bi bi-geo-alt-fill"></i> <a href="#" target="_blank">https://maps.app.goo.gl/3R9GMXR4JT4fKb8i8</a>
+                      <i class="bi bi-geo-alt-fill"></i> <a href="https://maps.app.goo.gl/3R9GMXR4JT4fKb8i8" target="_blank">Google Maps</a>
                     </p>
                     <p class="card-text icon-text">
                       <i class="bi bi-star-fill"></i> 4.6
